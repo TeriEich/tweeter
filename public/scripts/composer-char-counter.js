@@ -4,9 +4,9 @@ $(document).ready(function() {
 
 
 $('textarea').on('keyup', function() {
-  let $textInput = $(this).val();
-  let $tweetLength = $textInput.length;
-  let $remainingChar = 140 - $tweetLength;
+  let $tweetInput = $(this).val();
+  const $maxTweetLength = 140;
+  let $remainingChar = $maxTweetLength - $tweetInput.length;
   let $counter = $(this).siblings('.counter');
 
   $counter.text($remainingChar);

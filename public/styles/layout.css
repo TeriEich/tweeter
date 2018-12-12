@@ -27,8 +27,89 @@ body {
  */
 
 main {
-  width: 450px;
-  height: 900px;
   background-color: white;
+  height: 900px;
   margin: 0 auto 0 auto;
+  width: 450px;
+}
+
+.tweet {
+  margin: 2em 2em 0 2em;
+  position: relative;
+  top: 140px;
+}
+
+.tweet article {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D6D6D6;
+  background: white;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.tweet header {
+  background: #eee;
+  height: 5em;
+  opacity: 0.7;
+  padding: 10px;
+}
+
+.tweet .avatar {
+  border-radius: 7px;
+  float: left;
+  height: 3.5em;
+  overflow: hidden;
+  margin: 0 10px 10px 0;
+  width: 3.5em;
+}
+
+.tweet h2 {
+  float: left;
+  margin: 0;
+}
+
+.tweet h4 {
+  color: #A9A9A9;
+  float: right;
+  font-weight: 300;
+  margin: 6px 0 0 0;
+}
+
+.tweet p {
+  background-color: white;
+  height: 4em;
+  padding: 1.5em 10px;
+  vertical-align: middle;
+}
+
+.tweet footer {
+  background-color: white;
+  border-color: #eee;
+  border-style: solid;
+  border-width: 1px 0 0 0;
+  font-size: 0.75em;
+  padding: 8px 10px 8px 10px;
+}
+
+.tweet .flags {
+  float: right;
+}
+
+footer svg {
+  color: #00a087;
+  margin: 0 0 0 1em;
+  visibility: hidden;
+}
+
+.tweet:hover article {
+  border-color: #A9A9A9;
+}
+
+.tweet:hover header {
+  opacity: 1.0;
+}
+
+ .tweet:hover footer svg {
+  visibility: visible;
 }

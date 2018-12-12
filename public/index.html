@@ -24,6 +24,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Font Awesome (flag, retweet, heart) -->
+    <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/solid.js" integrity="sha384-akyniW0Jfrt1Z7kvRmaF2fkq9vuVQAPEGN4qq7s17l9PG3zz7FThoWnfVxpvnUn9" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/fontawesome.js" integrity="sha384-tHFnt8QELQGC1IJzcTUX5zFEnn/FLVa0ADTmxRyeSmWukJ4umWnJbwiMTkw/bKEK" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -46,7 +50,29 @@
         </form>
       </section>
 
+      <section id="tweets-container" class="tweet">
+        <article>
+          <header>
+            <img class="avatar" src="/images/tweeter_avatar2.png" alt="user avatar"/>
+            <h2>Bill Fields</h2>
+            <h4>@MrFields</h4>
+          </header>
+          <p>tweet content</p>
+          <footer>
+            <time>10 days ago</time>
+            <span class="flags">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+              <span>
+          </footer>
+        </article>
+      </section>
+
     </main>
+
+    <!-- Character Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   </body>
 </html>
