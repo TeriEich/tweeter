@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  /*min-height: 100h;*/
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -19,7 +20,7 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
-;
+  /*min-height: 100vh;*/
 }
 
 /*
@@ -28,13 +29,13 @@ body {
 
 main {
   background-color: white;
-  height: 900px;
+  min-height: 100vh;
   margin: 0 auto 0 auto;
   width: 450px;
 }
 
 .tweet {
-  margin: 2em 2em 0 2em;
+  margin: 2em 2em 2em 2em;
   position: relative;
   top: 140px;
 }
@@ -45,6 +46,7 @@ main {
   border-color: #D6D6D6;
   background: white;
   border-radius: 7px;
+  margin: 0 0 2em 0;
   overflow: hidden;
 }
 
