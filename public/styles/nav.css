@@ -22,3 +22,28 @@
   line-height: 2;
   margin: 0px 0px 0px 5px;
 }
+
+#nav-bar input {
+  float: right;
+  height: 3em;
+  width: 6em;
+  background-color: #e8fdff;
+  color: #00a087;
+  border-radius: 7px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1.25px;
+  margin: 8px 0 0 0;
+  font-size: 1.25em;
+  overflow: hidden;
+}
+
+#nav-bar:hover input {
+  background-color: white;
+  color: black;
+}
+
+#nav-bar:active input {
+  cursor: pointer;
+  pointer-events: ;
+}

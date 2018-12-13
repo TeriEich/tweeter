@@ -9,6 +9,7 @@
   padding: 10px;
   position: relative;
   top: 140px;
+  display: none;
 }
 
 .new-tweet h2 {

@@ -7,7 +7,7 @@
 
 // const moment = require('moment');
 
-
+//RENDERS TWEETS ON PAGE
 function renderTweets (tweets) {
   tweets.forEach(function(tweetData) {
     let $tweet = createTweetElement(tweetData);
@@ -15,7 +15,7 @@ function renderTweets (tweets) {
   });
 }
 
-
+//CREATE STRUCTURE FOR TWEETS
 function createTweetElement (tweetData) {
   let $article = $('<article></article>');
   let $header = $('<header></header>');
@@ -47,7 +47,7 @@ function createTweetElement (tweetData) {
 
 
 $(document).ready(function() {
-
+//POSTS A NEW TWEET TO PAGE
 let $tweetButton = $('#submit-tweet');
 $tweetButton.submit(function(event) {
   event.preventDefault();
@@ -64,6 +64,7 @@ $tweetButton.submit(function () {
     // $('textarea').val("");
     // $('.counter').val(140);
     $('#submit-tweet')[0].reset();
+    // $('.new-tweet').toggle(display);
     // $('.counter').innerText.reset();
     });
   } else if (!$tweetInput) {
@@ -73,7 +74,7 @@ $tweetButton.submit(function () {
   }
 })
 
-
+//LOADS NEW TWEET TO PAGE
 function loadTweets () {
   $.get('/tweets', function(data) {
   $('#tweets-container').empty();
@@ -83,3 +84,10 @@ function loadTweets () {
 
 loadTweets();
 });
+
+
+//TOGGLE NEW TWEET
+let $compose = $('#nav-bar input');
+$compose.click(function () {
+$('.new-tweet').toggle('slow');
+})
