@@ -5,7 +5,6 @@
  */
 html {
   box-sizing: border-box;
-  /*min-height: 100h;*/
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -20,8 +19,7 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
-  /*min-height: 100vh;*/
-}
+  }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
@@ -29,13 +27,13 @@ body {
 
 main {
   background-color: white;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0 auto 0 auto;
   width: 450px;
 }
 
-.tweet {
-  margin: 2em 2em 2em 2em;
+#tweets-container {
+  margin: 2em 2em 0 2em;
   position: relative;
   top: 140px;
 }
@@ -104,14 +102,14 @@ footer svg {
   visibility: hidden;
 }
 
-.tweet:hover article {
+.tweet article:hover {
   border-color: #A9A9A9;
 }
 
-.tweet:hover header {
+.tweet article:hover header {
   opacity: 1.0;
 }
 
- .tweet:hover footer svg {
+ .tweet article:hover footer svg {
   visibility: visible;
 }

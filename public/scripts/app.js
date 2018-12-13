@@ -5,8 +5,6 @@
  */
 
 
-// const moment = require('moment');
-
 //RENDERS TWEETS ON PAGE
 function renderTweets (tweets) {
   tweets.forEach(function(tweetData) {
@@ -27,7 +25,6 @@ function createTweetElement (tweetData) {
   let $heart = $('<i>').addClass('fas fa-heart');
 
   $img.attr('src', tweetData.user.avatars.small);
-  // $timeStamp = moment(tweetData.created_at).startOf('hour').fromNow();
 
   $article.append($header);
   $header.append($img);
@@ -36,7 +33,6 @@ function createTweetElement (tweetData) {
   $article.append($('<p></p>').text(tweetData.content.text));
   $article.append($footer);
   $footer.append($('<time></time>').text(tweetData.created_at));
-  // $footer.append($('<time></time>').text($timeStamp));
   $footer.append($span);
   $span.append($flag);
   $span.append($retweet);
@@ -47,6 +43,7 @@ function createTweetElement (tweetData) {
 
 
 $(document).ready(function() {
+
 //POSTS A NEW TWEET TO PAGE
 let $tweetButton = $('#submit-tweet');
 $tweetButton.submit(function(event) {
@@ -64,7 +61,6 @@ $tweetButton.submit(function () {
     // $('textarea').val("");
     // $('.counter').val(140);
     $('#submit-tweet')[0].reset();
-    // $('.new-tweet').toggle(display);
     // $('.counter').innerText.reset();
     });
   } else if (!$tweetInput) {
@@ -87,7 +83,12 @@ loadTweets();
 
 
 //TOGGLE NEW TWEET
-let $compose = $('#nav-bar input');
-$compose.click(function () {
-$('.new-tweet').toggle('slow');
-})
+$('#nav-bar input').click(function () {
+  if ($('.new-tweet').is(':hidden')) {
+    $('.new-tweet').slideDown();
+    $('textarea').focus();
+  } else {
+    $('.new-tweet').slideUp();
+  }
+});
+
