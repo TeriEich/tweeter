@@ -42,6 +42,7 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="submit-tweet" method="POST" action="/tweets/">
+          <em></em>
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
@@ -64,9 +65,7 @@
 
 
 <!-- Bugs to fix:
-  -tweet counter color does not reset when over-limit chars are deleted.
-  -tweet counter number does not reset when a tweet is submitted.
   -time stamp is wrong
-  -bottom of main (white background) is cut off
+  -can't click textarea, tweet button, or compose button in some spots;
   -circle on mouse click: https://tympanus.net/codrops/2015/02/11/subtle-click-feedback-effects/
   -->

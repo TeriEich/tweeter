@@ -48,32 +48,37 @@ $(document).ready(function() {
 let $tweetButton = $('#submit-tweet');
 $tweetButton.submit(function(event) {
   event.preventDefault();
-})
+});
 
 $tweetButton.submit(function () {
-  let $tweetInput = $('#submit-tweet textarea').val();
+  let $textBox = $('#submit-tweet textarea');
+  let $tweetInput = $textBox.val();
+  let $counter = $(this).children('.counter');
+  let $errMsg = $('#submit-tweet em');
   const $maxTweetLength = 140;
+  $errMsg.text('').slideUp();
 
   if ($tweetInput && $tweetInput.length <= $maxTweetLength) {
-    let $tweetContent = $('textarea').serialize();
+    let $tweetContent = $textBox.serialize();
     $.post('/tweets', $tweetContent, function(data){
-    loadTweets();
-    // $('textarea').val("");
-    // $('.counter').val(140);
-    $('#submit-tweet')[0].reset();
-    // $('.counter').innerText.reset();
+      $counter.text(140);
+      $tweetButton[0].reset();
+      loadTweets();
     });
   } else if (!$tweetInput) {
-    alert('You can\'t submit a blank tweet!');
+    $errMsg.text('You can\'t submit a blank tweet!');
+    $errMsg.slideDown().delay(400);
   } else {
-    alert('Wow, you\'re so verbose! Try to limit it to 140 characters, Tolkien!');
+    $errMsg.text('Wow, you\'re so verbose! Limit it to 140 characters, Tolkien!');
+    $errMsg.slideDown().delay(400);
   }
-})
+});
+
 
 //LOADS NEW TWEET TO PAGE
 function loadTweets () {
   $.get('/tweets', function(data) {
-  $('#tweets-container').empty();
+    $('#tweets-container').empty();
     renderTweets(data);
   });
 }
