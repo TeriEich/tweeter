@@ -1,8 +1,7 @@
 $(document).ready(function() {
-  console.log('DOM is ready');
 });
 
-
+//changes the character counter with tweet length:
 $('textarea').on('keyup', function() {
   let $tweetInput = $(this).val();
   const $maxTweetLength = 140;
@@ -13,7 +12,8 @@ $('textarea').on('keyup', function() {
 
   if ($remainingChar < 0) {
     $counter.css('color', 'red');
+  } else {
+    $counter.css('color', '#244751');
   }
-
 });
 

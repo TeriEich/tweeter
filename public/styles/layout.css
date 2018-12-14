@@ -33,9 +33,9 @@ main {
 }
 
 #tweets-container {
-  margin: 2em 2em 0 2em;
+  margin: 0 2em 0 2em;
+  padding: 4em 0;
   position: relative;
-  top: 140px;
 }
 
 .tweet article {
@@ -44,7 +44,7 @@ main {
   border-color: #D6D6D6;
   background: white;
   border-radius: 7px;
-  margin: 0 0 2em 0;
+  margin: 3em 0 2em 0;
   overflow: hidden;
 }
 
