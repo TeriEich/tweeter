@@ -17,3 +17,9 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 - Body-parser
 - MongoDB
+
+## Screenshots
+
+!["Screenshot of the front page on refresh/page load:"](https://github.com/TeriEich/tweeter/blob/master/docs/front-page-on-loading.png?raw=true)
+!["Screenshot of changes to the text box while typing a tweet:"](https://github.com/TeriEich/tweeter/blob/master/docs/typing-a-tweet.png?raw=true)
+!["Screenshot of the page immediately after submitting a new tweet:"](https://github.com/TeriEich/tweeter/blob/master/docs/after-submitting-tweet.png?raw=true)
