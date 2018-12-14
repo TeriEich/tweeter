@@ -19,6 +19,7 @@ function createTweetElement (tweetData) {
   let $header = $('<header></header>');
   let $img = $('<img>').addClass('avatar');
   let $footer = $('<footer></footer>');
+  let $time = $('<time></time>').text(moment(tweetData.created_at).startOf('hour').fromNow());
   let $span = $('<span></span>').addClass('flags');
   let $flag = $('<i>').addClass('fas fa-flag');
   let $retweet = $('<i>').addClass('fas fa-retweet');
@@ -32,7 +33,7 @@ function createTweetElement (tweetData) {
   $header.append($('<h4></h4>').text(tweetData.user.handle));
   $article.append($('<p></p>').text(tweetData.content.text));
   $article.append($footer);
-  $footer.append($('<time></time>').text(tweetData.created_at));
+  $footer.append($time);
   $footer.append($span);
   $span.append($flag);
   $span.append($retweet);
